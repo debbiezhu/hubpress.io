@@ -1,14 +1,36 @@
 = fermantation
+
 // See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
 // :hp-image: /covers/cover.png
 :published_at: 2017-06-05
 :hp-tags: requests, proxy, ntlm,
 :hp-alt-title: requests via ntlm proxy
-:source-highlighter: pygments
+
+:source-language: python, bash
 
 only via https://en.wikipedia.org/wiki/NT_LAN_Manager[ntlm] can i get internet access from company side. fml.
 
 hence, i need to tell my http://docs.python-requests.org/en/master/[requests] extra info about proxy and authorization.
 
+[source,python]  
+---- 
+Jupyter QtConsole 4.2.1
+Python 3.6.0 |Anaconda 4.3.1 (32-bit)| (default, Dec 23 2016, 12:06:52) [MSC v.1900 32 bit (Intel)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.1.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+import requests
+from requests_ntlm import HttpNtlmAuth
+requests.get('http://www.baidu.com',
+                   auth=HttpNtlmAuth('LUXGROUP\\DebbieZhu', '!reanjar7'),
+                   proxies={'http': 'http://10.224.10.252:808'})
+
+Out[1]: <Response [200]>
+----
 
 
