@@ -1,0 +1,14 @@
+= fermantation
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+:published_at: 2017-06-05
+:hp-tags: requests, proxy, ntlm,
+:hp-alt-title: requests via ntlm proxy
+:source-highlighter: pygments
+
+only via https://en.wikipedia.org/wiki/NT_LAN_Manager[ntlm] can i get internet access from company side. fml.
+
+hence, i need to tell my http://docs.python-requests.org/en/master/[requests] extra info about proxy and authorization.
+
+
+
