@@ -1,6 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thought]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 05 Jun 2017 09:17:55 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[fermantation]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thought]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 05 Jun 2017 11:28:43 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[fermantation]]></title><description><![CDATA[<div class="paragraph">
 <p>only via <a href="https://en.wikipedia.org/wiki/NT_LAN_Manager">ntlm</a> can i get internet access from company side. fml.</p>
 </div>
 <div class="paragraph">
 <p>hence, i need to tell my <a href="http://docs.python-requests.org/en/master/">requests</a> extra info about proxy and authorization.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">Jupyter QtConsole 4.2.1
+Python 3.6.0 |Anaconda 4.3.1 (32-bit)| (default, Dec 23 2016, 12:06:52) [MSC v.1900 32 bit (Intel)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.1.0 -- An enhanced Interactive Python.
+?         -&gt; Introduction and overview of IPython's features.
+%quickref -&gt; Quick reference.
+help      -&gt; Python's own help system.
+object?   -&gt; Details about 'object', use 'object??' for extra details.
+
+import requests
+from requests_ntlm import HttpNtlmAuth
+requests.get('http://www.baidu.com',
+                   auth=HttpNtlmAuth('LUXGROUP\\DebbieZhu', '!reanjar7'),
+                   proxies={'http': 'http://10.224.10.252:808'})
+
+Out[1]: &lt;Response [200]&gt;</code></pre>
+</div>
 </div>]]></description><link>https://debbiezhu.github.io/2017/06/05/requests-via-ntlm-proxy.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/06/05/requests-via-ntlm-proxy.html</guid><category><![CDATA[requests]]></category><category><![CDATA[proxy]]></category><category><![CDATA[ntlm]]></category><pubDate>Mon, 05 Jun 2017 00:00:00 GMT</pubDate></item></channel></rss>
