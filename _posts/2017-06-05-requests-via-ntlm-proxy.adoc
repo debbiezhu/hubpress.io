@@ -24,8 +24,8 @@ object?   -> Details about 'object', use 'object??' for extra details.
 import requests
 from requests_ntlm import HttpNtlmAuth
 requests.get('http://www.baidu.com',
-                   auth=HttpNtlmAuth('LUXGROUP\\DebbieZhu', '!reanjar7'),
-                   proxies={'http': 'http://10.224.10.252:808'})
+                   auth=HttpNtlmAuth('GROUP\\DebbieZhu', 'mypass'),
+                   proxies={'http': 'http://10.22.10.25:80'})
 
 Out[1]: <Response [200]>
 ----
