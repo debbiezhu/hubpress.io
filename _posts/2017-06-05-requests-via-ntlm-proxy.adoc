@@ -1,11 +1,8 @@
 = fermantation
 
-// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
-// :hp-image: /covers/cover.png
 :published_at: 2017-06-05
 :hp-tags: requests, proxy, ntlm,
 :hp-alt-title: requests via ntlm proxy
-
 :source-language: python, bash
 
 only via https://en.wikipedia.org/wiki/NT_LAN_Manager[ntlm] can i get internet access from company side. fml.
