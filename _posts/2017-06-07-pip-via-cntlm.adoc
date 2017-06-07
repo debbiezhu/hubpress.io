@@ -1,0 +1,17 @@
+= determinant
+:source-highlighter: pygment
+:published_at: 2017-06-07
+:hp-tags: pip, proxy, cntlm,
+:hp-alt-title: pip via cntlm
+:source-language: python, bash
+
+every answer addresses http://cntlm.sourceforge.net/[cntlm] is the way out when facing `pip behind proxy`. however, they doesn't mention `pip`.
+
+in my case, `HTTP_PROXY` is the only allowed, rather than `HTTPS_PROXY`. somehow, i took the use of combination. and it worked! 
+
+[source,bash]  
+---- 
+pip install --index-url=http://pypi.douban.com/simple/ --trusted-host pypi.douban.com --proxy http://localhost:3128 flask-admin
+----
+
+
