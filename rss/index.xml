@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thought]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 05 Jun 2017 11:46:49 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[fermantation]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thought]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 07 Jun 2017 08:27:28 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[determinant]]></title><description><![CDATA[<div class="paragraph">
+<p>every answer addresses <a href="http://cntlm.sourceforge.net/">cntlm</a> is the way out when facing <code>pip behind proxy</code>. however, they doesn&#8217;t mention <code>pip</code>.</p>
+</div>
+<div class="paragraph">
+<p>in my case, <code>HTTP_PROXY</code> is the only allowed, rather than <code>HTTPS_PROXY</code>. somehow, i took the use of combination. and it worked!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">pip install --index-url=http://pypi.douban.com/simple/ --trusted-host pypi.douban.com --proxy http://localhost:3128 flask-admin</code></pre>
+</div>
+</div>]]></description><link>https://debbiezhu.github.io/2017/06/07/pip-via-cntlm.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/06/07/pip-via-cntlm.html</guid><category><![CDATA[pip]]></category><category><![CDATA[proxy]]></category><category><![CDATA[cntlm]]></category><pubDate>Wed, 07 Jun 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[fermantation]]></title><description><![CDATA[<div class="paragraph">
 <p>only via <a href="https://en.wikipedia.org/wiki/NT_LAN_Manager">ntlm</a> can i get internet access from company side. fml.</p>
 </div>
 <div class="paragraph">
