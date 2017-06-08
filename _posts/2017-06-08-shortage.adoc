@@ -1,0 +1,21 @@
+= shortage
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+:published_at: 2017-06-08
+:hp-tags: thoughts, life, 
+// :hp-alt-title: i don't care you care
+
+My girlfriend's currently job is quite funny: force orders to be released in SAP complaining shortage cases.
+
+It's ridiculous. How can achieve this goal without resource? It's quite beyond brain power.
+
+The reason to do so is to make report beautiful.
+
+Another kind 'do nothing'. The more you do, the more fault will raise. Even there's sth. Quite fucking important, okay, might be not that vital to crash, they won't care.
+
+So, what's fucking meaning of using SAP. I mean, at least, you can always get instruction(s) from it. But you won't obey it. Why not just increase the threshold value, to a you happy, I happy, everyone happy situation?
+
+It looks like they're kin to some rule and too afraid to negate it.
+
+Procedural is a up side down. 
+
