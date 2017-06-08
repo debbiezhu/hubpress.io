@@ -2,7 +2,7 @@
 // See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
 // :hp-image: /covers/cover.png
 :published_at: 2017-06-08
-:hp-tags: thoughts, life, 
+:hp-tags: Delirium,
 // :hp-alt-title: i don't care you care
 
 My girlfriend's currently job is quite funny: force orders to be released in SAP complaining shortage cases.
