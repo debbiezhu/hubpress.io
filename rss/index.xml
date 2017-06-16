@@ -1,57 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thought]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 08 Jun 2017 08:50:20 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[shortage]]></title><description><![CDATA[<div class="paragraph">
-<p>My girlfriend&#8217;s currently job is quite funny: force orders to be released in SAP complaining shortage cases.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 16 Jun 2017 08:56:48 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[巴普洛夫的狗吃了薛定谔的猫]]></title><description><![CDATA[<div class="paragraph">
+<p>居然被告知在厂里拉女友的手不专业, 被告到hr那里去了.</p>
 </div>
 <div class="paragraph">
-<p>It&#8217;s ridiculous. How can achieve this goal without resource? It&#8217;s quite beyond brain power.</p>
+<p>噗.</p>
 </div>
 <div class="paragraph">
-<p>The reason to do so is to make report beautiful.</p>
-</div>
-<div class="paragraph">
-<p>Another kind 'do nothing'. The more you do, the more fault will raise. Even there&#8217;s sth. Quite fucking important, okay, might be not that vital to crash, they won&#8217;t care.</p>
-</div>
-<div class="paragraph">
-<p>So, what&#8217;s fucking meaning of using SAP. I mean, at least, you can always get instruction(s) from it. But you won&#8217;t obey it. Why not just increase the threshold value, to a you happy, I happy, everyone happy situation?</p>
-</div>
-<div class="paragraph">
-<p>It looks like they&#8217;re kin to some rule and too afraid to negate it.</p>
-</div>
-<div class="paragraph">
-<p>Procedural is a up side down.</p>
-</div>]]></description><link>https://debbiezhu.github.io/2017/06/08/shortage.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/06/08/shortage.html</guid><category><![CDATA[Delirium]]></category><pubDate>Thu, 08 Jun 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[determinant]]></title><description><![CDATA[<div class="paragraph">
-<p>every answer addresses <a href="http://cntlm.sourceforge.net/">cntlm</a> is the way out when facing <code>pip behind proxy</code>. however, they doesn&#8217;t mention <code>pip</code>.</p>
-</div>
-<div class="paragraph">
-<p>in my case, <code>HTTP_PROXY</code> is the only allowed, rather than <code>HTTPS_PROXY</code>. somehow, i took the use of combination. and it worked!</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">pip install --index-url=http://pypi.douban.com/simple/ --trusted-host pypi.douban.com --proxy http://localhost:3128 flask-admin</code></pre>
-</div>
-</div>]]></description><link>https://debbiezhu.github.io/2017/06/07/pip-via-cntlm.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/06/07/pip-via-cntlm.html</guid><category><![CDATA[pip]]></category><category><![CDATA[proxy]]></category><category><![CDATA[cntlm]]></category><pubDate>Wed, 07 Jun 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[fermantation]]></title><description><![CDATA[<div class="paragraph">
-<p>only via <a href="https://en.wikipedia.org/wiki/NT_LAN_Manager">ntlm</a> can i get internet access from company side. fml.</p>
-</div>
-<div class="paragraph">
-<p>hence, i need to tell my <a href="http://docs.python-requests.org/en/master/">requests</a> extra info about proxy and authorization.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">Jupyter QtConsole 4.2.1
-Python 3.6.0 |Anaconda 4.3.1 (32-bit)| (default, Dec 23 2016, 12:06:52) [MSC v.1900 32 bit (Intel)]
-Type "copyright", "credits" or "license" for more information.
-
-IPython 5.1.0 -- An enhanced Interactive Python.
-?         -&gt; Introduction and overview of IPython's features.
-%quickref -&gt; Quick reference.
-help      -&gt; Python's own help system.
-object?   -&gt; Details about 'object', use 'object??' for extra details.
-
-import requests
-from requests_ntlm import HttpNtlmAuth
-requests.get('http://www.baidu.com',
-                   auth=HttpNtlmAuth('GROUP\\DebbieZhu', 'mypass'),
-                   proxies={'http': 'http://10.22.10.25:80'})
-
-Out[1]: &lt;Response [200]&gt;</code></pre>
-</div>
-</div>]]></description><link>https://debbiezhu.github.io/2017/06/05/requests-via-ntlm-proxy.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/06/05/requests-via-ntlm-proxy.html</guid><category><![CDATA[requests]]></category><category><![CDATA[proxy]]></category><category><![CDATA[ntlm]]></category><pubDate>Mon, 05 Jun 2017 00:00:00 GMT</pubDate></item></channel></rss>
+<p>那我只能预祝打小报告者早日没有性生活了.</p>
+</div>]]></description><link>https://debbiezhu.github.io/2019/06/16/mind-fuck.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2019/06/16/mind-fuck.html</guid><category><![CDATA[Delirium]]></category><pubDate>Sun, 16 Jun 2019 00:00:00 GMT</pubDate></item></channel></rss>
