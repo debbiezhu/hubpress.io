@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 31 Jul 2017 14:04:22 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[mutual respect]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Aug 2017 08:38:08 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[odd requirement]]></title><description><![CDATA[<div class="paragraph">
+<p>got an odd requirement: add <code>+</code> in front leading spaces, in <code>shell</code> of course!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ cat f.txt
+M04_2016 ST20S60002 S62001CH:     32;      32
+M04_2016 ST20S60003 S62001CH:     32;      32</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">M04_2016 +ST20S60002 +S62001CH:+     32;+      32
+M04_2016 +ST20S60003 +S62001CH:+     32;+      32</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and here is an acceptable answer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ sed -e 's/\w /&amp;+/g; s/:/:+/g; s/;/;+/g' f.txt
+M04_2016 +ST20S60002 +S62001CH:+     32;+      32
+M04_2016 +ST20S60003 +S62001CH:+     32;+      32</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>for <code>sed</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-e</code>: <code>sed</code> code, can be omitted. seperated by <code>;</code>. quite alike <code>shell</code>;</p>
+</li>
+<li>
+<p>leading <code>s</code>: replace, or <strong>s</strong>ubstitue;</p>
+</li>
+<li>
+<p><code>\w</code>: a word pattern. looks like <code>\d</code> is a sub domain of <code>\w</code>;</p>
+</li>
+<li>
+<p><code>&amp;</code>: the pattern itself;</p>
+</li>
+<li>
+<p>ending <code>g</code>: <strong>g</strong>lobal.</p>
+</li>
+</ul>
+</div>]]></description><link>https://debbiezhu.github.io/2017/08/03/sed-add-plus.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/08/03/sed-add-plus.html</guid><category><![CDATA[linux]]></category><category><![CDATA[bash]]></category><category><![CDATA[sed]]></category><pubDate>Thu, 03 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[mutual respect]]></title><description><![CDATA[<div class="paragraph">
 <p>skinny girls deserve attentions, so do fat chicks.</p>
 </div>
 <div class="paragraph">
