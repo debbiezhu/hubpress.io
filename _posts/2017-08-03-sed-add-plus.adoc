@@ -1,0 +1,42 @@
+= odd requirement
+:source-highlighter: pygment
+:published_at: 2017-08-03
+:hp-tags: linux, bash, sed,
+:hp-alt-title: sed-add-plus
+:source-language: bash
+
+got an odd requirement: add `+` in front leading spaces, in `shell` of course!
+
+[source,bash]
+----
+$ cat f.txt
+M04_2016 ST20S60002 S62001CH:     32;      32
+M04_2016 ST20S60003 S62001CH:     32;      32
+----
+
+to 
+
+[source,bash]
+----
+M04_2016 +ST20S60002 +S62001CH:+     32;+      32
+M04_2016 +ST20S60003 +S62001CH:+     32;+      32
+----
+
+and here is an acceptable answer:
+
+[source,bash]  
+---- 
+$ sed -e 's/\w /&+/g; s/:/:+/g; s/;/;+/g' f.txt
+M04_2016 +ST20S60002 +S62001CH:+     32;+      32
+M04_2016 +ST20S60003 +S62001CH:+     32;+      32
+----
+
+for `sed`:
+
+- `-e`: `sed` code, can be omitted. seperated by `;`. quite alike `shell`;
+- leading `s`: replace, or **s**ubstitue;
+- `\w`: a word pattern. looks like `\d` is a sub domain of `\w`;
+- `&`: the pattern itself;
+- ending `g`: **g**lobal.
+
+
