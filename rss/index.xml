@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Aug 2017 08:38:08 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[odd requirement]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 04 Aug 2017 09:10:26 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[no more os.path.walk]]></title><description><![CDATA[<div class="paragraph">
+<p>here i want to read from files under same directory parallelly.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://stackoverflow.com/questions/7776293/read-txt-file-with-multi-threaded-in-python" class="bare">https://stackoverflow.com/questions/7776293/read-txt-file-with-multi-threaded-in-python</a></p>
+</div>
+<div class="paragraph">
+<p>obs., <code>multiprocessing</code> is a cute module. however, i find <code>pathlib</code> rocks!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">def get_pre_job_p(dirname):
+    with multiprocessing.Pool() as p:
+        p.map_async(get_pre_job, pathlib.Path(dirname).iterdir())
+        p.close()
+        p.join()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>a <strong>high level</strong> to manipulate stuff is always better than a <strong>low level</strong>, for the developer&#8217;s usability.</p>
+</div>]]></description><link>https://debbiezhu.github.io/2017/08/04/no-more-os-path-walk.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/08/04/no-more-os-path-walk.html</guid><category><![CDATA[python]]></category><pubDate>Fri, 04 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[odd requirement]]></title><description><![CDATA[<div class="paragraph">
 <p>got an odd requirement: add <code>+</code> in front leading spaces, in <code>shell</code> of course!</p>
 </div>
 <div class="listingblock">
