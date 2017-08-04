@@ -1,0 +1,26 @@
+= no more os.path.walk
+:source-highlighter: pygment
+:published_at: 2017-08-04
+:hp-tags: python
+:hp-alt-title: no-more-os-path-walk
+:source-language: python
+
+here i want to read from files under same directory parallelly. 
+
+https://stackoverflow.com/questions/7776293/read-txt-file-with-multi-threaded-in-python
+
+obs., `multiprocessing` is a cute module. however, i find `pathlib` rocks!
+
+[source,python]
+----
+def get_pre_job_p(dirname):
+    with multiprocessing.Pool() as p:
+        p.map_async(get_pre_job, pathlib.Path(dirname).iterdir())
+        p.close()
+        p.join()
+----
+
+a **high level** to manipulate stuff is always better than a **low level**, for the developer's usability.
+
+
+
