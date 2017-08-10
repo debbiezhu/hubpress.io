@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 04 Aug 2017 09:10:26 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[no more os.path.walk]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[DebbieZhu's thoughts]]></title><description><![CDATA[seeing is believing]]></description><link>https://debbiezhu.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 10 Aug 2017 08:59:45 GMT</lastBuildDate><atom:link href="https://debbiezhu.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[ah, awk.]]></title><description><![CDATA[<div class="paragraph">
+<p>to use <code>awk</code> to get a sum of <strong>group by</strong>.</p>
+</div>
+<div class="paragraph">
+<p>say, i have a <code>data</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ cat data
+a   i   1
+a   ii  2
+b   i   3
+b   ii  4
+a   i   5
+a   ii  6
+b   i   7
+b   ii  8</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to <strong>group by</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ cat my.awk
+#!/bin/awk
+
+{
+    A[$1"   "$2]+=$3;
+}
+
+END{
+    for(i in A){
+        print i"    "A[i]
+    }
+}
+
+DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ awk -f ./my.awk data
+a   ii    8
+a   i    6
+b   i    10
+b   ii    12</code></pre>
+</div>
+</div>]]></description><link>https://debbiezhu.github.io/2017/08/10/tear-down-is-the-only-way.html</link><guid isPermaLink="true">https://debbiezhu.github.io/2017/08/10/tear-down-is-the-only-way.html</guid><category><![CDATA[bash]]></category><pubDate>Thu, 10 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[no more os.path.walk]]></title><description><![CDATA[<div class="paragraph">
 <p>here i want to read from files under same directory parallelly.</p>
 </div>
 <div class="paragraph">
