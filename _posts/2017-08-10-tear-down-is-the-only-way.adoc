@@ -1,0 +1,53 @@
+= ah, awk.
+:source-highlighter: pygment
+:published_at: 2017-08-10
+:hp-tags: bash
+:hp-alt-title: tear-down-is-the-only-way
+:source-language: bash
+
+to use `awk` to get a sum of *group by*. 
+
+say, i have a `data`:
+
+[source,bash]
+----
+DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ cat data
+a   i   1
+a   ii  2
+b   i   3
+b   ii  4
+a   i   5
+a   ii  6
+b   i   7
+b   ii  8
+----
+
+to *group by*
+
+[source,bash]
+----
+DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ cat my.awk
+#!/bin/awk
+
+{
+    A[$1"   "$2]+=$3;
+}
+
+END{
+    for(i in A){
+        print i"    "A[i]
+    }
+}
+
+DebbieZhu@CNLIT066 MINGW32 ~/Documents
+$ awk -f ./my.awk data
+a   ii    8
+a   i    6
+b   i    10
+b   ii    12
+----
+
+
+
